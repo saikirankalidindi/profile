@@ -1,0 +1,148 @@
+#app{
+  text-align:center;
+  font-size:25px;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-clip:border-box;
+   text-fill-color: transparent;
+  background-clip:text;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+body {
+  font-family: 'Varela Round', sans-serif;
+}
+.modal-confirm {    
+  color: #636363;
+  width: 325px;
+  font-size: 14px;
+}
+.modal-confirm .modal-content {
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}
+.modal-confirm .modal-header {
+  border-bottom: none;   
+  position: relative;
+}
+.modal-confirm h4 {
+  text-align: center;
+  font-size: 26px;
+  margin: 30px 0 -15px;
+}
+.modal-confirm .form-control, .modal-confirm .btn {
+  min-height: 40px;
+  border-radius: 3px; 
+}
+.modal-confirm .close {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+} 
+.modal-confirm .modal-footer {
+  border: none;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 13px;
+} 
+.modal-confirm .icon-box {
+  color: #000000;    
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: -70px;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  z-index: 9;
+  background: #f75023;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+.modal-confirm .icon-box i {
+  font-size: 58px;
+  position: relative;
+  top: -25px;
+}
+.modal-confirm.modal-dialog {
+  margin-top: 80px;
+}
+.modal-confirm .btn {
+  color: #000000;
+  border-radius: 4px;
+  background: #f75023;
+  text-decoration: none;
+  transition: all 0.4s;
+  line-height: normal;
+  border: none;
+}
+.modal-confirm .btn:hover, .modal-confirm .btn:focus {
+  background: #f75023;
+  outline: none;
+}
+
+/* Styles for loading overlay */
+.loading {
+  overflow: hidden; /* Hide overflow while loading */
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.801); /* Overlay background color */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999; /* Place the overlay on top */
+}
+
+.loading-spinner {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* Spinner color */
+  border-top: 4px solid #fff; /* Spinner color */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+/* Animation for spinner */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.toast {
+  visibility: hidden;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 8px;
+  position: fixed;
+  bottom: 20px;
+  left: 80%;
+  transform: translateX(-50%);
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
